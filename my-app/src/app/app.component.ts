@@ -11,5 +11,8 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'my-app';
   heading = "Hello to Angular"
+  description = "This is a simple Angular application"
+  name = "Angular"
+  age = 10
 }
 
