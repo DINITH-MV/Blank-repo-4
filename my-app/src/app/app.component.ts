@@ -17,7 +17,7 @@ export class AppComponent {
   age = 10
 }
 
-// THIS UPDATE IS OK
+// THIS UPDATE IS OK NOW
 
 
 
