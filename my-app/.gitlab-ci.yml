@@ -1,0 +1,46 @@
+image: node:14
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - install
+  - lint
+  - build
+  - test
+  - deploy
+
+install:
+  stage: install
+  script:
+    - npm install
+  artifacts:
+    paths:
+      - node_modules/
+
+lint:
+  stage: lint
+  script:
+    - npm run lint
+
+build:
+  stage: build
+  script:
+    - npm run build --prod
+  artifacts:
+    paths:
+      - dist/
+
+test:
+  stage: test
+  script:
+    - npm test
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying..."
+    # Add your deployment script here
+  only:
+    - master
